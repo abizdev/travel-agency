@@ -1,0 +1,129 @@
+@import '../../mixins.scss';
+
+.navbar {
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .link-btn {
+      @include media(992) {
+        display: none;
+      }
+    }
+  }
+  &--logo {
+    width: 162px;
+  }
+  &--list {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    @include media(992) {
+     display: none;
+    }
+
+    a {
+      font-size: 17px;
+      font-family: 'circular';
+      font-weight: 500;
+      color: #ffffff;
+      position: relative;
+      $nav-list: &;
+      @include media(992) {
+        color: #DF6951;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -7px;
+        transform: translate(-50%, -50%);
+        width: 0%;
+        height: 3px;
+        border-radius: 34px;
+        background: #DF6951;
+        transition: 0.3s linear;
+      }
+      &:hover::after {
+        width: 70%;
+      }
+    }
+  }
+  &__menu {
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    max-width: 345px;
+    width: 100%;
+    background: #ffffff;
+    transform: translateX(-350px);
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease-in-out;
+
+    &.active {
+      transform: translateX(0);
+    }
+    &--list {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      
+
+      li a {
+        font-size: 17px;
+        font-family: 'circular';
+        font-weight: 500;
+        color: #DF6951;
+        text-align: center;
+        display: block;
+      }
+      .link-btn {
+        @include media(992) {
+          display: flex;
+        }
+      }
+    }
+    &--close {
+      border: none;
+      outline: none;
+      background: transparent;
+      width: 25px;
+      align-self: flex-end;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    
+  }
+  .burger {
+    width: 35px;
+    height: 35px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    @include media(992) {
+      display: flex;
+    }
+
+    span {
+      width: 100%;
+      height: 3px;
+      border-radius: 8px;
+      background: #DF6951;
+    }
+  }
+}

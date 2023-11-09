@@ -30,3 +30,13 @@ $y: var(--y);
   margin: 0 auto;
   border: 1px solid red;
 }
+.link-btn {
+  padding: 18px 27px;
+  background: #DF6951;
+  box-shadow: 0px 20px 35px rgba(223, 105, 81, 0.15);
+  font-size: 17px;
+  color: #ffffff;
+  font-weight: 500;
+  font-family: 'circular';
+  border-radius: 12px;
+}
