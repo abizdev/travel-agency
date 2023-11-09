@@ -1,0 +1,43 @@
+@mixin media($size) {
+  @media(max-width: #{$size}px) {
+    @content;
+  }
+}
+
+@mixin FontFace($name, $fw, $fName, $fUrl, $ext, $format) {
+  @font-face {
+    font-family: $name;
+    src: url('/fonts/#{$fUrl}-#{$fName}.#{$ext}') format($format);
+    font-weight: $fw;
+  }
+}
+
+$manrope: ('Medium', 500), ('Bold', 700);
+$volkhov: ('Regular', 400), ('Bold', 700);
+$poppins: ('Light', 300), ('Regular', 400), ('Medium', 500), ('SemiBold', 600), ('Bold', 700);
+
+@each $name, $weight in $poppins {
+  @include FontFace('poppins', $weight, $name, 'poppins/Poppins', 'ttf', 'truetype')
+}
+@each $name, $weight in $manrope {
+  @include FontFace('manrope', $weight, $name, 'manrope/Manrope', 'ttf', 'truetype')
+}
+@each $name, $weight in $volkhov {
+  @include FontFace('volkhov', $weight, $name, 'volkhov/Volkhov', 'ttf', 'truetype')
+}
+
+@font-face {
+  font-family: 'circular';
+  src: url('/fonts/CircularStd-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'roboto';
+  src: url('/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'yesteryear';
+  src: url('/fonts/Yesteryear-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
