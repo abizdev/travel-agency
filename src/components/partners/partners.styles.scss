@@ -1,0 +1,21 @@
+@import '../../mixins.scss';
+
+.partners {
+  padding: 75px 171px;
+  background: #F7F7F7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  @include media(992) {
+    padding: 50px;
+  }
+  @include media(456) {
+    flex-direction: column;
+  }
+
+  img {
+    height: 50px;
+  }
+}

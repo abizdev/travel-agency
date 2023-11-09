@@ -1,9 +1,10 @@
 @import '../../mixins.scss';
 .header {
   padding: 66px;
-  height: 100vh;
+  height: 800px;
   position: relative;
   display: flex;
+  overflow: hidden;
   @include media(768) {
     padding: 40px 15px;
   }
@@ -64,4 +65,40 @@
       text-align: center;
     }
   }
+  &__scroll {
+    position: absolute;
+    left: 28px;
+    bottom: -196px;
+    width: 392px;
+    height: 392px;
+    border-radius: 50%;
+    border: 1px dashed #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: Rotate 50s infinite linear;
+    @include media(480) {
+      display: none;
+    }
+
+    &--block {
+      width: 162px;
+      height: 162px;
+      border-radius: 50%;
+      border: 1px dashed #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 41px;
+      color: #ffffff;
+      font-size: 18px;
+      line-height: 27px;
+      animation: Rotate 50s infinite reverse linear;
+    }
+  }
+}
+
+@keyframes Rotate {
+  0% {transform: rotate(0);}
+  100% {transform: rotate(360deg);}
 }

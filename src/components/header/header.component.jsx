@@ -16,6 +16,11 @@ const Header = () => {
           </div>
         </div>
       </div>
+      <div className="header__scroll">
+        <div className="header__scroll--block">
+          Scroll
+        </div>
+      </div>
     </header>
   )
 }
