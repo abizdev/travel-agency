@@ -37,6 +37,7 @@
       line-height: 68px;
       color: #ffffff;
       font-weight: 700;
+      position: relative;
       @include media(768) {
         font-size: 45px;
         line-height: 50px;
@@ -45,6 +46,16 @@
       @include media(576) {
         font-size: 30px;
         line-height: 35px;
+      }
+
+      &::before {
+        content: '';
+        background: url('/public/images/wave.png') center center / cover no-repeat;
+        width: 78px;
+        height: 15px;
+        position: absolute;
+        top: -15px;
+        left: 0;
       }
     }
   }
