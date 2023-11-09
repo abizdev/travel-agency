@@ -1,0 +1,61 @@
+@import '../../mixins.scss';
+
+.banner {
+  height: 399px;
+  position: relative;
+
+  &--content {
+    padding: 0 15px;  
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    h2 {
+      max-width: 539px;
+      width: 100%;
+      font-size: 50px;
+      line-height: 65px;
+      font-family: 'vokhov';
+      font-weight: 700;
+      text-transform: capitalize;
+      color: #ffffff;
+      position: relative;
+      z-index: 2;
+      @include media(496) {
+        text-align: center;
+      }
+      
+      span {
+        font-size: 50px;
+        line-height: 65px;
+        font-family: 'vokhov';
+        font-weight: 700;
+        color: #ffffff;
+        position: relative;
+
+        &::after {
+          width: 312px;
+          height: 41px;
+          background: url('/images/banner-line.svg') center center / cover no-repeat;
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -45px;
+          @include media(496) {
+            width: 100%;
+            background: url('/images/banner-line.svg') center center / contain no-repeat;
+          }
+        }
+      }
+    }
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+}
