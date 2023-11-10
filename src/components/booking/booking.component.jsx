@@ -9,7 +9,7 @@ const Booking = () => {
         <div className="booking__items">
           <div className="booking__item">
             <div className="booking__item--img">
-              <img src="/public/images/booking/item1.svg" alt="booking" />
+              <img src="/images/booking/item1.svg" alt="booking" />
             </div>
             <div className="booking__item--text">
               <h3>Choose Destination</h3>
@@ -18,7 +18,7 @@ const Booking = () => {
           </div>
           <div className="booking__item">
             <div className="booking__item--img">
-              <img src="/public/images/booking/item2.svg" alt="booking" />
+              <img src="/images/booking/item2.svg" alt="booking" />
             </div>
             <div className="booking__item--text">
               <h3>Check Availability</h3>
@@ -27,7 +27,7 @@ const Booking = () => {
           </div>
           <div className="booking__item">
             <div className="booking__item--img">
-              <img src="/public/images/booking/item3.svg" alt="booking" />
+              <img src="/images/booking/item3.svg" alt="booking" />
             </div>
             <div className="booking__item--text">
               <h3>Let’s Go</h3>
@@ -36,7 +36,7 @@ const Booking = () => {
           </div>
         </div>
       </div>
-      <img src="/public/images/booking.png" alt="booking" />
+      <img src="/images/booking.png" alt="booking" />
     </section>
   )
 }
