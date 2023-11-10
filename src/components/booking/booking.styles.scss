@@ -1,0 +1,81 @@
+@import '../../mixins.scss';
+
+.booking {
+  padding: 85px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  @include media(992) {
+    flex-direction: column;
+    padding: 50px 15px;
+  }
+
+  img {
+    width: 55%;
+    height: 100%;
+    object-fit: cover;
+    @include media(992) {
+      width: 100%;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    &--img {
+      width: 47px;
+      height: 47px;
+      border-radius: 13px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+
+      img {
+        width: 22px;
+        height: 22px;
+        object-fit: contain;
+      }
+    }
+    &--text {
+      width: 100%;
+
+      h3 {
+        font-size: 16px;
+        line-height: 20px;
+        color: #5E6282;
+        font-weight: 700;
+        margin-bottom: 4px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 20px;
+        color: #5E6282;
+      }
+    }
+  }
+}
+.booking__item:first-of-type .booking__item--img {
+  background: #F0BB1F;
+}
+.booking__item:nth-of-type(2) .booking__item--img {
+  background: #FF7152;
+}
+.booking__item:last-of-type .booking__item--img {
+  background: #006380;
+}
