@@ -1,3 +1,5 @@
+@import '../../mixins.scss';
+
 .clients {
   height: 768px;
   display: flex;
@@ -8,7 +10,7 @@
   
   .title {
     text-align: center;
-    margin-bottom: 95px;
+    margin-bottom: 35px;
   }
   &__content {
     max-width: 639px;
@@ -20,10 +22,11 @@
     position: relative;
     z-index: 1;
   }
+  &--swiper {
+    width: 100%;
+    border: 1px solid red;
+  }
   &--slide {
-    height: 277px !important;
-    border-radius: 17px;
-    background: #ffffff;
     display: flex !important;
     flex-direction: column;
     justify-content: center;
@@ -31,20 +34,26 @@
     text-align: center;
     position: relative;
 
+    &__info {
+      border-radius: 17px;
+      background: #ffffff;
+      padding: 92px 73px 33px;
+      transform: translateY(-50px);
+    }
     img {
       width: 120px;
       height: 120px;
-      object-fit: contain;
-      position: absolute;
-      top: -32px;
-      left: 0;
-
+      position: relative;
       z-index: 1;
+      transform: translateY(20px);
     }
     p {
+      max-width: 393px;
+      width: 100%;
       font-size: 13px;
       line-height: 23px;
       color: #000000;
+      margin-bottom: 13px;
     }
     span {
       font-size: 13px;
@@ -57,14 +66,49 @@
 
 .swiper {
   width: 100%;
-  overflow-x: hidden;
-  // overflow-y: visible;
-  overflow: visible !important;
-  overflow-x: hidden !important;
-  overflow-y: visible !important;
-  &-wrapper {
-    overflow: visible !important;
-    overflow-x: hidden !important;
-    overflow-y: visible !important;
+
+  &-button {
+
+    &-prev,
+    &-next {
+      width: 62px !important;
+      height: 62px !important;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #737373;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include media(576) {
+        display: none !important;
+      }
+      &::after {
+        font-family: 'icons' !important;
+        font-weight: 300;
+        color: #ffffff;
+        font-size: 26px !important;
+      }
+    }
+    &-next::after {
+      content: '\f178' !important;
+    }
+    &-prev::after {
+      content: '\f177' !important;
+    }
+  }
+  &-pagination {
+
+    &-bullet {
+      width: 30px !important;
+      height: 2px !important;
+      border-radius: 36px !important;
+      background: #ffffff !important;
+      opacity: 1 !important;
+
+      &-active {
+        background: #DF6951 !important;
+      }
+    }
   }
 }
