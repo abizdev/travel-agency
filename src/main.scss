@@ -1,20 +1,5 @@
 @import './mixins.scss';
 
-:root {
-  --p: 'poppins';
-  --m: 'manrope';
-  --v: 'volkhov';
-  --c: 'circular';
-  --r: 'roboto';
-  --y: 'yesteryear';
-}
-$p: var(--p);
-$m: var(--m);
-$v: var(--v);
-$c: var(--c);
-$r: var(--r);
-$y: var(--y);
-
 * {
   margin: 0;
   padding: 0;
@@ -28,7 +13,7 @@ $y: var(--y);
   max-width: 1278px;
   width: 100%;
   margin: 0 auto;
-  border: 1px solid red;
+  // border: 1px solid red;
 }
 .link-btn {
   padding: 18px 27px;

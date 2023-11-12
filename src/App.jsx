@@ -6,6 +6,7 @@ import Specials from "./components/specials/specials.component"
 import Booking from "./components/booking/booking.component"
 import Promotion from "./components/promotion/promotion.component"
 import Clients from "./components/clients/clients.component"
+import Footer from "./components/footer/footer.component"
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Banner />
       <Promotion />
       <Clients />
+      <Footer />
     </>
   )
 }
