@@ -1,11 +1,19 @@
 import { useState } from 'react'
+import { useTranslation } from "react-i18next";
 import './navbar.styles.scss'
 
 const Navbar = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false)
+  const [currentLanguage, setCurrentLanguage] = useState("en")
+  const { t, i18n: {changeLanguage} } = useTranslation();
 
   const toggleMenu = () => {
     setIsOpenMenu(!isOpenMenu)
+  }
+  const handleChangeLanguage = () => {
+    const newLanguage = currentLanguage === "en" ? "ru" : "en";
+    setCurrentLanguage(newLanguage);
+    changeLanguage(newLanguage)
   }
 
 
@@ -17,13 +25,16 @@ const Navbar = () => {
         </a>
 
         <ul className="navbar--list">
-          <li><a href="#!">Home</a></li>
-          <li><a href="#!">About</a></li>
-          <li><a href="#!">Services</a></li>
-          <li><a href="#!">Upcomming Packages</a></li>
+          <li><a href="#!">{t('navbarList.main')}</a></li>
+          <li><a href="#!">{t('navbarList.services')}</a></li>
+          <li><a href="#!">{t('navbarList.about')}</a></li>
+          <li><a href="#!">{t('navbarList.contacts')}</a></li>
         </ul>
 
-        <a href="#!" className="link-btn">Contacts</a>
+        <div className="navbar--contacts">
+          <button className="lang-toggler" onClick={() => handleChangeLanguage()}>{currentLanguage}</button>
+          <a href="#!" className="link-btn">{t('contactsBtn')}</a>
+        </div>
 
         <div className="burger" onClick={() => toggleMenu()}>
           <span></span>
@@ -36,11 +47,12 @@ const Navbar = () => {
             <img src="/images/close.svg" alt="close"/>
           </button>
           <ul className="navbar__menu--list">
-            <li><a href="#!">Home</a></li>
-            <li><a href="#!">About</a></li>
-            <li><a href="#!">Services</a></li>
-            <li><a href="#!">Upcomming Packages</a></li>
-            <a href="#!" className="link-btn">Contacts</a>
+            <li><a href="#!">{t('navbarList.main')}</a></li>
+            <li><a href="#!">{t('navbarList.services')}</a></li>
+            <li><a href="#!">{t('navbarList.about')}</a></li>
+            <li><a href="#!">{t('navbarList.contacts')}</a></li>
+            <a href="#!" className="link-btn">{t('contactsBtn')}</a>
+            <button className="lang-toggler menu-toggler" onClick={() => handleChangeLanguage()}>{currentLanguage}</button>
           </ul>
         </aside>
       </div>

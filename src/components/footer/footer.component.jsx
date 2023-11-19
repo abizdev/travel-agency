@@ -10,13 +10,13 @@ const Footer = () => {
           <a href="#!" className="footer--info__tel">+998 99 999 99 99</a>
           <div className="footer--info__socials">
             <a href="#!">
-              <img src="/public/images/social-icons/facebook.svg" alt="facebook"/>
+              <img src="/images/social-icons/facebook.svg" alt="facebook"/>
             </a>
             <a href="#!">
-              <img src="/public/images/social-icons/instagram.svg" alt="instagram"/>
+              <img src="/images/social-icons/instagram.svg" alt="instagram"/>
             </a>
             <a href="#!">
-              <img src="/public/images/social-icons/telegram.svg" alt="telegram"/>
+              <img src="/images/social-icons/telegram.svg" alt="telegram"/>
             </a>
           </div>
         </div>

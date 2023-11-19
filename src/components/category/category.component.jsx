@@ -1,38 +1,46 @@
+import { useTranslation } from "react-i18next";
+
 import './category.style.scss'
 
-const categoriesItems = [
-  {
-    id: 1,
-    img: '/images/categories/category1.png',
-    title: 'Guided Tours',
-    text: 'sunt qui repellat saepe quo velit aperiam id aliquam placeat.'
-  },
-  {
-    id: 2,
-    img: '/images/categories/category2.png',
-    title: 'Best Flights Options',
-    text: 'sunt qui repellat saepe quo velit aperiam id aliquam placeat.'
-  },
-  {
-    id: 3,
-    img: '/images/categories/category3.png',
-    title: 'Religious Tours',
-    text: 'sunt qui repellat saepe quo velit aperiam id aliquam placeat.'
-  },
-  {
-    id: 4,
-    img: '/images/categories/category4.png',
-    title: 'Medical insurance',
-    text: 'sunt qui repellat saepe quo velit aperiam id aliquam placeat.'
-  },
-]
+
+
+
 
 const Category = () => {
+  const { t } = useTranslation()
+
+  const categoriesItems = [
+    {
+      id: 1,
+      img: '/images/categories/category1.png',
+      title: t('category.tours.gid.title'),
+      text: t('category.tours.gid.descr')
+    },
+    {
+      id: 2,
+      img: '/images/categories/category2.png',
+      title: t('category.tours.transport.title'),
+      text: t('category.tours.transport.descr')
+    },
+    {
+      id: 3,
+      img: '/images/categories/category3.png',
+      title: t('category.tours.price.title'),
+      text: t('category.tours.price.descr')
+    },
+    {
+      id: 4,
+      img: '/images/categories/category4.png',
+      title: t('category.tours.medical.title'),
+      text: t('category.tours.medical.descr')
+    },
+  ]
+
   return (
     <section className='category'>
       <div className='category__content container'>
-        <h4 className='sub--title'>CATEGORY</h4>
-        <h2 className='title'>We Offer Best Services</h2>
+        <h4 className='sub--title'>{t('category.subTitle')}</h4>
+        <h2 className='title'>{t('category.title')}</h2>
         <div className="category__items">
           {
             categoriesItems.map((category) => (

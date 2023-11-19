@@ -113,6 +113,11 @@
     }
     
   }
+  &--contacts {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
   .burger {
     width: 35px;
     height: 35px;
@@ -132,5 +137,18 @@
       border-radius: 8px;
       background: #DF6951;
     }
+  }
+}
+.lang-toggler {
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 500;
+  &.menu-toggler {
+    color: #000000;
   }
 }
