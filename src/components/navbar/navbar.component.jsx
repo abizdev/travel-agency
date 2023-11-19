@@ -11,7 +11,7 @@ const Navbar = () => {
     setIsOpenMenu(!isOpenMenu)
   }
   const handleChangeLanguage = () => {
-    const newLanguage = currentLanguage === "en" ? "ru" : "en";
+    const newLanguage = currentLanguage === "en" ? "ru" : currentLanguage === "ru" ? "uz" : "en";
     setCurrentLanguage(newLanguage);
     changeLanguage(newLanguage)
   }
