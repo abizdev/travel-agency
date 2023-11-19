@@ -10,7 +10,7 @@ const Promotion = () => {
         <h4 className="sub--title">{t('promotion.subTitle')}</h4>
         <h2 className="title">{t('promotion.title')}</h2>
         <p>{t('promotion.descr')}</p>
-        <a href="#!" className="link-btn">{t('contactsBtn')}</a>
+        <a href="tel:+998998224780" className="link-btn">{t('contactsBtn')}</a>
       </div>
       <div className="promotion__items">
         <img src="/images/promotion/item1.png" alt="special" />

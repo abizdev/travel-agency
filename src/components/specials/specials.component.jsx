@@ -12,7 +12,7 @@ const Specials = () => {
         <h4 className="sub--title">{t('specials.subTitle')}</h4>
         <h2 className="title">{t('specials.title')}</h2>
         <p>{t('specials.descr')}</p>
-        <a href="#!" className="link-btn">{t('contactsBtn')}</a>
+        <a href="tel:+998998224780" className="link-btn">{t('contactsBtn')}</a>
       </div>
     </section>
   )

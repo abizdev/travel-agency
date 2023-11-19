@@ -33,7 +33,7 @@ const Navbar = () => {
 
         <div className="navbar--contacts">
           <button className="lang-toggler" onClick={() => handleChangeLanguage()}>{currentLanguage}</button>
-          <a href="#!" className="link-btn">{t('contactsBtn')}</a>
+          <a href="tel:+998998224780" className="link-btn">{t('contactsBtn')}</a>
         </div>
 
         <div className="burger" onClick={() => toggleMenu()}>
@@ -46,12 +46,13 @@ const Navbar = () => {
           <button className='navbar__menu--close' onClick={() => toggleMenu()}>
             <img src="/images/close.svg" alt="close"/>
           </button>
+          
           <ul className="navbar__menu--list">
             <li><a href="#!">{t('navbarList.main')}</a></li>
             <li><a href="#!">{t('navbarList.services')}</a></li>
             <li><a href="#!">{t('navbarList.about')}</a></li>
             <li><a href="#!">{t('navbarList.contacts')}</a></li>
-            <a href="#!" className="link-btn">{t('contactsBtn')}</a>
+            <a href="tel:+998998224780" className="link-btn">{t('contactsBtn')}</a>
             <button className="lang-toggler menu-toggler" onClick={() => handleChangeLanguage()}>{currentLanguage}</button>
           </ul>
         </aside>
