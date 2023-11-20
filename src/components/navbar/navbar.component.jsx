@@ -10,8 +10,10 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsOpenMenu(!isOpenMenu)
   }
-  const handleChangeLanguage = () => {
-    const newLanguage = currentLanguage === "en" ? "ru" : currentLanguage === "ru" ? "uz" : "en";
+  const handleChangeLanguage = (lang = "en") => {
+    console.log(lang);
+    const newLanguage = lang === "en" ? "en" : lang === "ru" ? "ru" : "uz";
+    // console.log(newLanguage);
     setCurrentLanguage(newLanguage);
     changeLanguage(newLanguage)
   }
@@ -32,7 +34,11 @@ const Navbar = () => {
         </ul>
 
         <div className="navbar--contacts">
-          <button className="lang-toggler" onClick={() => handleChangeLanguage()}>{currentLanguage}</button>
+          <select onChange={(event) => handleChangeLanguage(event.target.value)} className="navbar--contacts__lang">
+            <option value="en" defaultChecked>en</option>
+            <option value="ru">ru</option>
+            <option value="uz">uz</option>
+          </select>
           <a href="tel:+998998224780" className="link-btn">{t('contactsBtn')}</a>
         </div>
 
@@ -53,7 +59,12 @@ const Navbar = () => {
             <li><a href="#!">{t('navbarList.about')}</a></li>
             <li><a href="#!">{t('navbarList.contacts')}</a></li>
             <a href="tel:+998998224780" className="link-btn">{t('contactsBtn')}</a>
-            <button className="lang-toggler menu-toggler" onClick={() => handleChangeLanguage()}>{currentLanguage}</button>
+            
+            <select onChange={(event) => handleChangeLanguage(event.target.value)} className="navbar--contacts__lang lang--menu">
+              <option value="en" defaultChecked>en</option>
+              <option value="ru">ru</option>
+              <option value="uz">uz</option>
+            </select>
           </ul>
         </aside>
       </div>

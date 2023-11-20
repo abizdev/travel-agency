@@ -156,7 +156,7 @@ i18n.use(initReactI18next).init({
           about: "Biz haqimizda",
           contacts: "Kontaktlar",
         },
-        contactsBtn: "Kontaktlar",
+        contactsBtn: "Aloqa",
         headerTitle:
           "Biz bilan yangi ufqlarni oching. Sizning qulayligingiz bizning ustuvor vazifamizdir",
         banner: {

@@ -117,6 +117,39 @@
     display: flex;
     align-items: center;
     gap: 20px;
+
+    &__lang {
+      width: 40px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background: transparent;
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      padding: 5px;
+      background: #ffffff;
+      color: #DF6951;
+      border-radius: 8px;
+      font-size: 14px;
+      line-height: 19px;
+      text-align: center;
+      @include media(992) {
+        display: none;
+      }
+
+      option {
+        border: none;
+        outline: none;
+        background: #ffffff;
+        margin-top: 3px;
+        color: #DF6951;
+        border-radius: 8px;
+        font-size: 14px;
+        line-height: 19px;
+        text-align: center;
+      }
+    }
   }
   .burger {
     width: 35px;
@@ -139,16 +172,11 @@
     }
   }
 }
-.lang-toggler {
-  border: none;
-  outline: none;
-  background: transparent;
-  cursor: pointer;
+.lang--menu {
+  background: #DF6951;
   color: #ffffff;
-  font-size: 16px;
-  line-height: 19px;
-  font-weight: 500;
-  &.menu-toggler {
-    color: #000000;
+
+  @include media(992) {
+    display: flex;
   }
 }
