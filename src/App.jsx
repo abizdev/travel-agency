@@ -12,13 +12,15 @@ const App = () => {
   return (
     <>
       <Header />
-      <Partners />
-      <Category />
-      <Specials />
-      <Booking />
-      <Banner />
-      <Promotion />
-      <Clients />
+      <main>
+        <Partners />
+        <Category />
+        <Specials />
+        <Booking />
+        <Banner />
+        <Promotion />
+        <Clients />
+      </main>
       <Footer />
     </>
   )

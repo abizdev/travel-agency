@@ -75,6 +75,22 @@ i18n.use(initReactI18next).init({
           descr:
             'Our tours offer luxurious hotels with ocean views, candlelit dinners by the sea, romantic walks under the stars and much more. We take care of every smallest detail to ensure that your journey is filled with tenderness and admiration. Trust us and we will create for you a romantic adventure that will be remembered for a lifetime. Immerse yourself in a world of love and beauty with our romantic tours"',
         },
+        footer: {
+          contactsTitle: 'Let\'s get in touch',
+          contactsText: 'We\'re open for any suggestion or just to have a chat',
+          footerAddress: {
+            text: 'Address',
+            address: 'Shayxontohur district, chilonzor oqtepa street, 15A' 
+          },
+          phone: 'Phone',
+          formTitle: 'Leave your information and we will be in touch',
+          form: {
+            name: {label: 'Full name', placeholder: 'Name'},
+            email: {label: 'Email address', placeholder: 'Email'},
+            subject: {label: 'Subject', placeholder: 'Subject'},
+            message : {label: 'Message', placeholder: 'Message'},
+          }
+        }
       },
     },
     ru: {
@@ -146,6 +162,22 @@ i18n.use(initReactI18next).init({
           descr:
             "Наши туры предлагают роскошные отели с видом на океан, ужины при свечах на берегу моря, романтические прогулки под звездным небом и многое другое. Мы заботимся о каждой мельчайшей детали, чтобы ваше путешествие было наполнено нежностью и восхищением. Доверьтесь нам, и мы создадим для вас романтическое приключение, которое запомнится на всю жизнь. Погрузитесь в мир любви и красоты с нашими романтическими турами»",
         },
+        footer: {
+          contactsTitle: 'Давайте свяжемся',
+          contactsText: 'Мы открыты для любых предложений или просто для общения',
+          footerAddress: {
+            text: 'Адрес',
+            address: 'Шайхонтохурский район, улица Чиланзора Октепа, 15А.' 
+          },
+          phone: 'Номер',
+          formTitle: 'Оставьте свои данные и мы свяжемся с вами',
+          form: {
+            name: {label: 'Полное имя', placeholder: 'Имя'},
+            email: {label: 'Адрес электронной почты', placeholder: 'Электронная почта'},
+            subject: {label: 'Предмет', placeholder: 'Предмет'},
+            message : {label: 'Сообщение', placeholder: 'Сообщение'},
+          }
+        }
       },
     },
     uz: {
@@ -217,6 +249,22 @@ i18n.use(initReactI18next).init({
           descr:
             "Bizning turlarimiz okean manzarali hashamatli mehmonxonalarni, dengiz bo'yida sham yorug'ida kechki ovqatlarni, yulduzlar ostida romantik yurishlarni va boshqa ko'p narsalarni taklif qiladi. Sayohatingiz muloyimlik va hayratga to'lishi uchun biz har bir mayda detalga e'tibor beramiz. Bizga ishoning va biz siz uchun bir umr esda qoladigan romantik sarguzasht yaratamiz. Bizning romantik sayohatlarimiz bilan sevgi va go'zallik olamiga sho'ng'in»",
         },
+        footer: {
+          contactsTitle: 'Keling, aloqaga chiqamiz',
+          contactsText: 'Biz har qanday taklifga yoki shunchaki suhbatlashishga tayyormiz',
+          footerAddress: {
+            text: 'Manzil',
+            address: 'Shayxontohur tumani, chilonzor oqtepa ko\'chasi, 15А uy' 
+          },
+          phone: 'Telefon',
+          formTitle: 'Malumotlaringizni qoldiring, biz aloqaga chiqamiz',
+          form: {
+            name: {label: 'I.F.SH.', placeholder: 'Ism'},
+            email: {label: 'EMAILINGIZ', placeholder: 'Email'},
+            subject: {label: 'MAVZU', placeholder: 'MAVZU'},
+            message : {label: 'HABAR', placeholder: 'HABAR'},
+          }
+        }
       },
     },
   },

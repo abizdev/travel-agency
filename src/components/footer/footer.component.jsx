@@ -1,36 +1,158 @@
 import { useTranslation } from 'react-i18next'
-import './footer.styles.scss'
+// import './footer.styles.scss'
+import './style.css'
 
 const Footer = () => {
   const { t } = useTranslation()
 
   return (
-    <footer className="footer">
-      <img src="/images/footer-bg.png" alt="footer-bg" className="footer--bg" />
-      <div className="footer__content container">
-        <div className="footer--info">
-          <img src="/images/logo.png" alt="logo" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error inventore magni provident repellat officiis qui amet. Cum debitis perspiciatis deserunt cumque voluptates accusantium quas voluptatibus iste, pariatur harum nihil ad!</p>
-          <a href="tel:+998998224780" className="footer--info__tel">+998 99 822 47 80</a>
-          <div className="footer--info__socials">
-            <a href="#!">
-              <img src="/images/social-icons/facebook.svg" alt="facebook"/>
-            </a>
-            <a href="#!">
-              <img src="/images/social-icons/instagram.svg" alt="instagram"/>
-            </a>
-            <a href="#!">
-              <img src="/images/social-icons/telegram.svg" alt="telegram"/>
-            </a>
+    <footer className="ftco-section">
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-md-12">
+            <div className="wrapper">
+              <div className="row no-gutters">
+                <div
+                  className="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch"
+                >
+                  <div className="contact-wrap w-100 p-md-5 p-4">
+                    <h3 className="mb-4">
+                      {t('footer.formTitle')}
+                    </h3>
+
+                    <form
+                      method="POST"
+                      id="contactForm"
+                      name="contactForm"
+                      className="contactForm"
+                      novalidate="novalidate"
+                    >
+                      <div className="row">
+                        <div className="col-md-6">
+                          <div className="form-group">
+                            <label className="label" for="name">{t('footer.form.name.label')}</label>
+                            <input
+                              type="text"
+                              className="form-control"
+                              name="name"
+                              id="name"
+                              placeholder={t('footer.form.name.placeholder')}
+                            />
+                          </div>
+                        </div>
+                        <div className="col-md-6">
+                          <div className="form-group">
+                            <label className="label" for="email">{t('footer.form.email.label')}</label>
+                            <input
+                              type="email"
+                              className="form-control"
+                              name="email"
+                              id="email"
+                              placeholder={t('footer.form.email.placeholder')}
+                            />
+                          </div>
+                        </div>
+                        <div className="col-md-12">
+                          <div className="form-group">
+                            <label className="label" for="subject">{t('footer.form.subject.label')}</label>
+                            <input
+                              type="text"
+                              className="form-control"
+                              name="subject"
+                              id="subject"
+                              placeholder={t('footer.form.subject.placeholder')}
+                            />
+                          </div>
+                        </div>
+                        <div className="col-md-12">
+                          <div className="form-group">
+                            <label className="label" for="#">{t('footer.form.message.label')}</label>
+                            <textarea
+                              name="message"
+                              className="form-control"
+                              id="message"
+                              cols="30"
+                              rows="4"
+                              placeholder={t('footer.form.message.placeholder')}
+                            ></textarea>
+                          </div>
+                        </div>
+                        <div className="col-md-12">
+                          <div className="form-group">
+                            <input
+                              type="submit"
+                              value="Send Message"
+                              className="btn btn-primary"
+                            />
+                            <div className="submitting"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-5 d-flex align-items-stretch">
+                  <div className="info-wrap bg-primary w-100 p-md-5 p-4">
+                    <h3>{t('footer.contactsTitle')}</h3>
+                    <p className="mb-4">{t('footer.contactsText')}</p>
+                    <div className="dbox w-100 d-flex align-items-start">
+                      <div
+                        className="icon d-flex align-items-center justify-content-center"
+                      >
+                        <span className="fa fa-map-marker"></span>
+                      </div>
+                      <div className="text pl-3">
+                        <p>
+                          <span>{t('footer.footerAddress.text')}:</span> {t('footer.footerAddress.address')}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="dbox w-100 d-flex align-items-center">
+                      <div
+                        className="icon d-flex align-items-center justify-content-center"
+                      >
+                        <span className="fa fa-phone"></span>
+                      </div>
+                      <div className="text pl-3">
+                        <p>
+                          <span>{t('footer.phone')}:<br /></span>
+                          <a href="tel:+998998224780"> +998 99 822 47 80</a>
+                        </p>
+                      </div>
+                    </div>
+                    <div className="dbox w-100 d-flex align-items-center">
+                      <div
+                        className="icon d-flex align-items-center justify-content-center"
+                      >
+                        <span className="fa fa-paper-plane"></span>
+                      </div>
+                      <div className="text pl-3">
+                        <p>
+                          <span>Email:</span>
+                          <a href="mailto:info@vipcarry.uz">
+                            info@vipcarry.uz</a>
+                        </p>
+                      </div>
+                    </div>
+                    <div className="dbox w-100 d-flex align-items-center">
+                      <div
+                        className="icon d-flex align-items-center justify-content-center"
+                      >
+                        <span className="fa fa-globe"></span>
+                      </div>
+                      <div className="text pl-3">
+                        <p>
+                          <span>Telegram:</span>
+                          <a href="https://t.me/vipcarry_uz">vipcarry_uz</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <ul className="footer--list">
-          <li><a href="#!">{t('navbarList.main')}</a></li>
-          <li><a href="#!">{t('navbarList.services')}</a></li>
-          <li><a href="#!">{t('navbarList.about')}</a></li>
-          <li><a href="#!">{t('navbarList.contacts')}</a></li>
-        </ul>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.3269195318467!2d69.2054077888364!3d41.304714763396724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8bca5f7771d5%3A0x257645c8ba026d65!2z0JrQvtC80L_QsNC90LjRjyBQZXJmZWN0IEltcGV4!5e0!3m2!1sru!2s!4v1700405386015!5m2!1sru!2s" style={{border:0}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </footer>
   )
