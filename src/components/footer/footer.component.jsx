@@ -6,7 +6,7 @@ const Footer = () => {
   const { t } = useTranslation()
 
   return (
-    <footer className="ftco-section">
+    <footer className="ftco-section" id='footer'>
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-12">
@@ -81,7 +81,7 @@ const Footer = () => {
                           <div className="form-group">
                             <input
                               type="submit"
-                              value="Send Message"
+                              value={t('footer.sendBtn')}
                               className="btn btn-primary"
                             />
                             <div className="submitting"></div>
@@ -128,7 +128,7 @@ const Footer = () => {
                       </div>
                       <div className="text pl-3">
                         <p>
-                          <span>Email:</span>
+                          <span>Email:<br /></span>
                           <a href="mailto:info@vipcarry.uz">
                             info@vipcarry.uz</a>
                         </p>
@@ -142,7 +142,7 @@ const Footer = () => {
                       </div>
                       <div className="text pl-3">
                         <p>
-                          <span>Telegram:</span>
+                          <span>Telegram:<br /></span>
                           <a href="https://t.me/vipcarry_uz">vipcarry_uz</a>
                         </p>
                       </div>

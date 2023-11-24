@@ -10,7 +10,12 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsOpenMenu(!isOpenMenu)
   }
-  const handleChangeLanguage = (lang = "en") => {
+  const closeMenu = () => {
+    setIsOpenMenu(false)
+  }
+
+
+  const handleChangeLanguage = (lang = "ru") => {
     console.log(lang);
     const newLanguage = lang === "en" ? "en" : lang === "ru" ? "ru" : "uz";
     // console.log(newLanguage);
@@ -27,16 +32,16 @@ const Navbar = () => {
         </a>
 
         <ul className="navbar--list">
-          <li><a href="#!">{t('navbarList.main')}</a></li>
-          <li><a href="#!">{t('navbarList.services')}</a></li>
-          <li><a href="#!">{t('navbarList.about')}</a></li>
-          <li><a href="#!">{t('navbarList.contacts')}</a></li>
+          <li><a href="#header" onClick={() => closeMenu()}>{t('navbarList.main')}</a></li>
+          <li><a href="#category" onClick={() => closeMenu()}>{t('navbarList.services')}</a></li>
+          <li><a href="#specials" onClick={() => closeMenu()}>{t('navbarList.about')}</a></li>
+          <li><a href="#footer" onClick={() => closeMenu()}>{t('navbarList.contacts')}</a></li>
         </ul>
 
         <div className="navbar--contacts">
           <select onChange={(event) => handleChangeLanguage(event.target.value)} className="navbar--contacts__lang">
-            <option value="en" defaultChecked>en</option>
-            <option value="ru">ru</option>
+            <option value="ru" defaultChecked>ru</option>
+            <option value="en">en</option>
             <option value="uz">uz</option>
           </select>
           <a href="tel:+998998224780" className="link-btn">{t('contactsBtn')}</a>
@@ -54,15 +59,15 @@ const Navbar = () => {
           </button>
           
           <ul className="navbar__menu--list">
-            <li><a href="#!">{t('navbarList.main')}</a></li>
-            <li><a href="#!">{t('navbarList.services')}</a></li>
-            <li><a href="#!">{t('navbarList.about')}</a></li>
-            <li><a href="#!">{t('navbarList.contacts')}</a></li>
+            <li><a href="#header" onClick={() => closeMenu()}>{t('navbarList.main')}</a></li>
+            <li><a href="#category" onClick={() => closeMenu()}>{t('navbarList.services')}</a></li>
+            <li><a href="#specials" onClick={() => closeMenu()}>{t('navbarList.about')}</a></li>
+            <li><a href="#footer" onClick={() => closeMenu()}>{t('navbarList.contacts')}</a></li>
             <a href="tel:+998998224780" className="link-btn">{t('contactsBtn')}</a>
             
             <select onChange={(event) => handleChangeLanguage(event.target.value)} className="navbar--contacts__lang lang--menu">
-              <option value="en" defaultChecked>en</option>
-              <option value="ru">ru</option>
+              <option value="ru" defaultChecked>ru</option>
+              <option value="en">en</option>
               <option value="uz">uz</option>
             </select>
           </ul>

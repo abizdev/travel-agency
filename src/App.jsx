@@ -19,7 +19,6 @@ const App = () => {
         <Booking />
         <Banner />
         <Promotion />
-        <Clients />
       </main>
       <Footer />
     </>

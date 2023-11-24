@@ -37,7 +37,7 @@ const Category = () => {
   ]
 
   return (
-    <section className='category'>
+    <section className='category' id="category">
       <div className='category__content container'>
         <h4 className='sub--title'>{t('category.subTitle')}</h4>
         <h2 className='title'>{t('category.title')}</h2>

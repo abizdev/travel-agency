@@ -89,7 +89,8 @@ i18n.use(initReactI18next).init({
             email: {label: 'Email address', placeholder: 'Email'},
             subject: {label: 'Subject', placeholder: 'Subject'},
             message : {label: 'Message', placeholder: 'Message'},
-          }
+          },
+          sendBtn: 'Send Message'
         }
       },
     },
@@ -167,7 +168,7 @@ i18n.use(initReactI18next).init({
           contactsText: 'Мы открыты для любых предложений или просто для общения',
           footerAddress: {
             text: 'Адрес',
-            address: 'Шайхонтохурский район, улица Чиланзора Октепа, 15А.' 
+            address: 'Шайхонтохурский район, улица Чиланзор Октепа, 15А.' 
           },
           phone: 'Номер',
           formTitle: 'Оставьте свои данные и мы свяжемся с вами',
@@ -176,7 +177,8 @@ i18n.use(initReactI18next).init({
             email: {label: 'Адрес электронной почты', placeholder: 'Электронная почта'},
             subject: {label: 'Предмет', placeholder: 'Предмет'},
             message : {label: 'Сообщение', placeholder: 'Сообщение'},
-          }
+          },
+          sendBtn: 'Отправить сообщение'
         }
       },
     },
@@ -263,13 +265,14 @@ i18n.use(initReactI18next).init({
             email: {label: 'EMAILINGIZ', placeholder: 'Email'},
             subject: {label: 'MAVZU', placeholder: 'MAVZU'},
             message : {label: 'HABAR', placeholder: 'HABAR'},
-          }
+          },
+          sendBtn: 'Yuborish'
         }
       },
     },
   },
-  lng: "en", // Default language
-  fallbackLng: "en",
+  lng: "ru", // Default language
+  fallbackLng: "ru",
   interpolation: {
     escapeValue: false,
   },

@@ -6,7 +6,7 @@ const Specials = () => {
   const { t } = useTranslation()
 
   return (
-    <section className="specials container">
+    <section className="specials container" id='specials'>
       <img src="/images/special.png" alt="special" />
       <div className="specials__info">
         <h4 className="sub--title">{t('specials.subTitle')}</h4>
