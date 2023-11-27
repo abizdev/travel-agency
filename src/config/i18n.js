@@ -90,7 +90,8 @@ i18n.use(initReactI18next).init({
             subject: {label: 'Subject', placeholder: 'Subject'},
             message : {label: 'Message', placeholder: 'Message'},
           },
-          sendBtn: 'Send Message'
+          sendBtn: 'Send Message',
+          popup: 'Your letter is sent'
         }
       },
     },
@@ -178,7 +179,8 @@ i18n.use(initReactI18next).init({
             subject: {label: 'Предмет', placeholder: 'Предмет'},
             message : {label: 'Сообщение', placeholder: 'Сообщение'},
           },
-          sendBtn: 'Отправить сообщение'
+          sendBtn: 'Отправить сообщение',
+          popup: 'Ваша заявка принята'
         }
       },
     },
@@ -266,7 +268,8 @@ i18n.use(initReactI18next).init({
             subject: {label: 'MAVZU', placeholder: 'MAVZU'},
             message : {label: 'HABAR', placeholder: 'HABAR'},
           },
-          sendBtn: 'Yuborish'
+          sendBtn: 'Yuborish',
+          popup: 'Sizning arizangiz qabul qilindi'
         }
       },
     },

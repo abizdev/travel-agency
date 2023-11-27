@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-// import './footer.styles.scss'
+import './footer.styles.scss'
 import './style.css'
 
 const Footer = () => {
@@ -78,7 +78,7 @@ const Footer = () => {
                           </div>
                         </div>
                         <div className="col-md-12">
-                          <div className="form-group">
+                          <div className="form-group" onClick={() => alert(`${t('footer.popup')}`)}>
                             <input
                               type="submit"
                               value={t('footer.sendBtn')}
@@ -154,6 +154,11 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      {/* <div className="footer-popup">
+        <div className="footer-popup__content">
+          <h2>{t('footer.popup')}</h2>
+        </div>
+      </div> */}
     </footer>
   )
 }

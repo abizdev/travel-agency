@@ -1,101 +1,130 @@
 @import '../../mixins.scss';
 
-.footer {
-  min-height: 484px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 0;
-  // background: rgba(0, 0, 0, 0.2);
-  background: rgba(188, 188, 188, 0.5);
+// .footer {
+//   min-height: 484px;
+//   position: relative;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 50px 0;
+//   // background: rgba(0, 0, 0, 0.2);
+//   background: rgba(188, 188, 188, 0.5);
   
-  &__content {
-    padding: 0 15px;
-    height: 400px;
-    position: relative;
-    z-index: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    @include media(992) {
-      height: 100%;
-      row-gap: 50px;
-      justify-content: space-evenly;
-    }
+//   &__content {
+//     padding: 0 15px;
+//     height: 400px;
+//     position: relative;
+//     z-index: 1;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     flex-wrap: wrap;
+//     gap: 30px;
+//     @include media(992) {
+//       height: 100%;
+//       row-gap: 50px;
+//       justify-content: space-evenly;
+//     }
 
-    iframe {
-      width: 400px;
-      height: 400px;
-      @include media(912) {
-        width: 90%;
-      }
-    }
-  }
-  &--list {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 15px;
+//     iframe {
+//       width: 400px;
+//       height: 400px;
+//       @include media(912) {
+//         width: 90%;
+//       }
+//     }
+//   }
+//   &--list {
+//     display: flex;
+//     flex-direction: column;
+//     text-align: center;
+//     gap: 15px;
 
-    a {
-      color: #DF6951;
-      font-size: 16px;
-      line-height: 19px;
-    }
-  }
-  &--bg {
-    position: absolute;
+//     a {
+//       color: #DF6951;
+//       font-size: 16px;
+//       line-height: 19px;
+//     }
+//   }
+//   &--bg {
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     height: 100%;
+//     z-index: 0;
+//     object-fit: contain;
+//   }
+//   &--info {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-start;
+//     gap: 15px;
+//     @include media(576) {
+//       width: 90%;
+//     }
+
+//     img {
+//       width: 200px;
+//     }
+//     &__tel {
+//       font-size: 16px;
+//       line-height: 28px;
+//       color: #757095;
+//       font-family: 'manrope';
+//       font-weight: 500;
+//     }
+//     &__socials {
+//       display: flex;
+//       align-items: center;
+//       gap: 16px;
+
+//       img {
+//         width: 20px;
+//         height: 20px;
+//       }
+//     }
+//     p {
+//       max-width: 350px;
+//       width: 100%;
+//       color: #DF6951;
+//     }
+//   }
+//   &--maps {
+//     height: 80%;
+//     object-fit: contain;
+//     @include media(480) {
+//       width: 100%;
+//       height: 100%;
+//       object-fit: cover;
+//     }
+//   }
+// }
+
+.footer {
+  // position: relative;
+  &-popup {
+    position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    z-index: 0;
-    object-fit: contain;
-  }
-  &--info {
+    background: rgba(0, 0, 0, 0.4);
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-    @include media(576) {
-      width: 90%;
-    }
-
-    img {
-      width: 200px;
-    }
-    &__tel {
-      font-size: 16px;
-      line-height: 28px;
-      color: #757095;
-      font-family: 'manrope';
-      font-weight: 500;
-    }
-    &__socials {
+    justify-content: center;
+    align-items: center;
+    &__content {
       display: flex;
+      justify-content: center;
       align-items: center;
-      gap: 16px;
+      padding: 30px;
+      background: #ffffff;
 
-      img {
-        width: 20px;
-        height: 20px;
+      h2 {
+        color: #000000;
+        font-size: 20px;
+        line-height: 25px;
+        font-weight: 500;
       }
-    }
-    p {
-      max-width: 350px;
-      width: 100%;
-      color: #DF6951;
-    }
-  }
-  &--maps {
-    height: 80%;
-    object-fit: contain;
-    @include media(480) {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
     }
   }
 }
